@@ -11,6 +11,6 @@
 @interface BaseInfo : NSObject<NSCoding>
 
 +(void)save:(BaseInfo*)info;
-+(BaseInfo *)initInfoWithClass:(Class)clazz;
++(instancetype)initInfoWithClass:(Class)clazz;
 
 @end
