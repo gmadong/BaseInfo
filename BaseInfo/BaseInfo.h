@@ -10,7 +10,7 @@
 
 @interface BaseInfo : NSObject<NSCoding>
 
-+(void)save:(BaseInfo*)info;
++(void)save:(instancetype)info;
 +(instancetype)initInfoWithClass:(Class)clazz;
 
 @end
