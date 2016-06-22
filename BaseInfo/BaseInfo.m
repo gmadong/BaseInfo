@@ -40,7 +40,7 @@
     }
     return self;
 }
-+(void)save:(BaseInfo *)info
++(void)save:(instancetype)info
 {
     const char *className = class_getName([info class]);
     NSString *classNameStr =[[NSString alloc] initWithUTF8String:className];
@@ -48,7 +48,7 @@
     [NSKeyedArchiver archiveRootObject:info toFile:path];
 }
 
-+(BaseInfo *)initInfoWithClass:(Class)clazz
++(instancetype)initInfoWithClass:(Class)clazz
 {
     const char *className = class_getName(clazz);
     NSString *classNameStr =[[NSString alloc] initWithUTF8String:className];
